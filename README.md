@@ -11,15 +11,10 @@ Click below to acces a Colab notebook for training YOLO models. It makes trainin
 <a href="https://colab.research.google.com/github/ruanwensheng/License-Plate-Detection-Using-YOLOv11-/blob/main/License_Plate_Detection.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 ## Results
 ![results](train/results.png)
-### 🔍 Loss & Metric Curves
-
-The model was trained for **15 epochs** with results shown below:
-
-![Training Results](demo/results.png)
 
 ---
 
-### ✅ Observations (as an AI Engineer – License Plate Detection)
+### Evaluations
 
 | Criteria                     | Evaluation |
 |-----------------------------|------------|
@@ -29,15 +24,10 @@ The model was trained for **15 epochs** with results shown below:
 | **General Detection Quality** | Good: **mAP50-95 ≈ 72.5%**, still improvable for harder cases |
 | **Precision**               | Increases consistently, reaching ~98.5% |
 | **Recall**                  | Also increases well, reaching ~96.5% |
-| **Fit for LPR Task**        | ✅ Very suitable – detects license plates consistently and accurately |
+| **Fit for LPR Task**        | Suitable – detects license plates consistently and accurately |
 
 ---
 
-### 🛠 Recommendations
-
-- 📈 Train for more epochs (e.g., +10–20) to see if mAP50-95 improves further.
-- 🎛 Use **advanced augmentations**: blur, low light, rotations, occlusion simulation.
-- 🧠 Consider lightweight models (**YOLOv8n/s**) if targeting embedded or edge devices.
 
 ## Deploy YOLO Models
 The `yolo_detect.py` script provides a basic example that shows how to load a model, run inference on an image source, parse the inference results, and display boxes around each detected class in the image. This script shows how to work with YOLO models in Python, and it can be used as a starting point for more advanced applications. 
