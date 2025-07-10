@@ -1,5 +1,7 @@
 # Train and Deploy YOLO Models with Ultralytics to detect license plate
-Tutorials and examples showing how to train and deploy Ultralytics YOLO models.
+## 🎥 YOLOv8 Vehicle Detection Demo
+
+![Demo](demo1.gif)
 
 
 ## Train YOLO Models With Google Colab
