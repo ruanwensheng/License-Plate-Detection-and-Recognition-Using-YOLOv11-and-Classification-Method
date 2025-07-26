@@ -65,4 +65,29 @@ The Raspberry Pi 4 and 5 are just powerful enough to run nano and small-sized YO
 [How to Run YOLO Detection Models on the Raspberry Pi](https://www.ejtech.io/learn/yolo-on-raspberry-pi)
 
 # Plate's Digits Recognition Using Convolutional Neural Network
+## Characters Segmentation Algorithm
+<img width="709" height="447" alt="image" src="https://github.com/user-attachments/assets/b890cf64-73cd-4174-89bc-576c0befdc5c" />
 
+Connected Components Analysis (CCA) is a technique used to detect and label groups of connected pixels in a binary (black-and-white) image. It is commonly used to segment characters by identifying distinct regions where pixels are connected.
+
+In this approach, the image is scanned to locate connected black pixels. There are two types of connectivity:
+- **4-connected**: Pixels are connected horizontally and vertically.
+- **8-connected**: Pixels are connected horizontally, vertically, and diagonally.
+
+This project uses **8-connected** labeling to better capture diagonally connected pixels. Each connected region is assigned a unique label, which allows individual characters to be separated from each other and the background.
+
+After labeling, the next step is to filter out non-character regions (e.g., noise or background blobs). This is done by analyzing each component's properties, such as:
+- Size
+- Width-to-height ratio
+- Area
+- Solidity (how solid or filled the region is)
+
+By applying rules based on these features, we can remove regions that are too small, too large, or unlikely to represent characters.
+
+The table below summarizes the key features used:
+
+| Feature       | Description                                 | Purpose                         |
+|---------------|---------------------------------------------|----------------------------------|
+| `aspectRatio` | Width-to-height ratio of the bounding box   | Identifies tall or narrow shapes |
+| `solidity`    | Contour area divided by bounding box area   | Filters out hollow or noisy blobs|
+| `heightRatio` | Contour height relative to image height     | Used for size-based filtering    |
