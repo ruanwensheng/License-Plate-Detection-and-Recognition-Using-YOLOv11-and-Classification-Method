@@ -91,3 +91,21 @@ The table below summarizes the key features used:
 | `aspectRatio` | Width-to-height ratio of the bounding box   | Identifies tall or narrow shapes |
 | `solidity`    | Contour area divided by bounding box area   | Filters out hollow or noisy blobs|
 | `heightRatio` | Contour height relative to image height     | Used for size-based filtering    |
+## Characters Recognition
+<img width="660" height="185" alt="image" src="https://github.com/user-attachments/assets/3cb5b7de-14a6-4991-a028-7d59d78b2e40" />
+
+ Character data was generated from a Vietnamese license plate dataset to improve the model’s accuracy and robustness. Characters are segmented from training images, resized to 28×28, and organized into folders named after each character. The data is saved as NumPy files: alphas.npy for letters (labels 0–20), digits.npy for digits (labels 21–30)
+ ### CNN Model Used
+ <img width="986" height="294" alt="image" src="https://github.com/user-attachments/assets/5df756e2-4352-4f60-bc97-b1e473947089" />
+| Parameter       | Value                          |
+|-----------------|--------------------------------|
+| Optimizer       | Adam (learning rate = 1e-3)    |
+| Loss Function   | Categorical Cross-Entropy      |
+| Batch Size      | 128                            |
+| Epochs          | 50                             |
+
+## Recognition Result
+<img width="499" height="425" alt="image" src="https://github.com/user-attachments/assets/df8cd03a-092b-4b4e-a724-1917285dde74" />
+Accuracy : 90.08% (watch the report for more details)
+Convolutional Neural Networks (CNNs) demonstrate strong performance in character recognition tasks, particularly when dealing with visually similar characters and challenging image conditions such as segmentation noise, uneven lighting, or distortions. Their robustness comes from the ability to automatically learn spatial hierarchies of features through layers of convolutional filters. Unlike traditional classifiers like K-Nearest Neighbors (KNN), which rely on raw pixel distances, CNNs extract and refine increasingly abstract and discriminative features at each layer. This enables CNNs to better distinguish between confusing character pairs such as ‘5’ and ‘S’ or ‘0’ and ‘D’, where subtle shape differences are critical. The network’s layered architecture allows it to learn patterns that are invariant to small shifts or noise, making it highly effective for real-world handwritten or printed text recognition tasks.
+
