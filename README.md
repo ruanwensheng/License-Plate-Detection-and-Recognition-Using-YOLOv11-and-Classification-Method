@@ -1,5 +1,5 @@
 # Train and Deploy YOLO Models with Ultralytics to detect license plate
-## 🎥 YOLOv8 Vehicle Detection Demo
+## 🎥 YOLOv11 Vehicle Detection Demo
 <img width="1049" height="583" alt="image" src="https://github.com/user-attachments/assets/fcc2a13a-ab66-4e84-b416-dc1c263260ad" />
 
 ![Demo](demo1.gif)
@@ -97,6 +97,8 @@ The table below summarizes the key features used:
  Character data was generated from a Vietnamese license plate dataset to improve the model’s accuracy and robustness. Characters are segmented from training images, resized to 28×28, and organized into folders named after each character. The data is saved as NumPy files: alphas.npy for letters (labels 0–20), digits.npy for digits (labels 21–30)
  ### CNN Model Used
  <img width="986" height="294" alt="image" src="https://github.com/user-attachments/assets/5df756e2-4352-4f60-bc97-b1e473947089" />
+
+ 
 | Parameter       | Value                          |
 |-----------------|--------------------------------|
 | Optimizer       | Adam (learning rate = 1e-3)    |
