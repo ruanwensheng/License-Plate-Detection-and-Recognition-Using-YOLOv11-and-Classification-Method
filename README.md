@@ -28,6 +28,12 @@ Click below to acces a Colab notebook for training YOLO models. It makes trainin
 | **Fit for LPR Task**        | Suitable – detects license plates consistently and accurately |
 
 ---
+| Value               | Meaning                                                                 |
+|---------------------|-------------------------------------------------------------------------|
+| **181 layers**       | The model has 181 layers (e.g., Conv, BatchNorm, Upsample, etc.)        |
+| **9,428,179 parameters** | Total number of learnable parameters (weights + biases)                |
+| **0 gradients**       | The model is in inference mode (not training), so no gradients are calculated |
+| **21.5 GFLOPs**       | Approximate computational cost per image — lower means faster inference |
 
 
 ## Deploy YOLO Models
@@ -57,3 +63,6 @@ Here are all the arguments for yolo_detect.py:
 The Raspberry Pi 4 and 5 are just powerful enough to run nano and small-sized YOLO models in real time. The article linked below walks through how to run YOLO models on the Raspberry Pi.
 
 [How to Run YOLO Detection Models on the Raspberry Pi](https://www.ejtech.io/learn/yolo-on-raspberry-pi)
+
+# Plate's Digits Recognition Using Convolutional Neural Network
+
